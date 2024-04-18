@@ -15,7 +15,11 @@ const server = http.createServer((request, response) => {
       path += "/about.html";
       response.statusCode = 200;
       break;
-      case "/about-bb":
+    case "/contact-me":
+      path += "/contact-me.html";
+      response.statusCode = 200;
+      break;
+      case "/about-old":
         response.statusCode = 301;
         response.setHeader("Location", "/about")
         response.end();
@@ -36,6 +40,6 @@ const server = http.createServer((request, response) => {
   })
 });
 
-server.listen(3000, "localhost", () => {
+server.listen(8080, "localhost", () => {
   console.log("listening...")
 });
